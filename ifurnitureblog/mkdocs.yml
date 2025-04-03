@@ -1,0 +1,51 @@
+site_name: "ifurniture Blog"    # 网站标题
+site_url: https://username.github.io/blog-project/  # GitHub Pages 地址
+theme:
+  name: material          # 启用 Material 主题
+  language: zh            # 中文界面
+  favicon: Images/favicon.ico  # 网页页签图标
+  logo: Images/favicon.ico  #站点内 Logo
+#  icon:
+#    logo: material/github  # 网站 Logo 图标
+#    admonition:
+#      note: octicons/tag-16  # 提示框图标
+#  palette:
+#    primary: indigo       # 主题配色
+#    accent: blue
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs      # 顶部导航标签页
+    - navigation.expand    # 自动展开侧边栏
+    - toc.follow           # 目录跟随滚动
+    - search.highlight     # 搜索结果高亮
+    - navigation.instant   #进度指示器
+    - navigation.instant.progress  #进度指示器
+    - navigation.tracking  #锚点追踪
+nav:                      # 导航菜单
+  - 主页: index.md
+  - 操作说明:
+    - 任务(Tasks): Operating instructions/Task/All Tasks.md
+  - 发版日志:
+    - 2025年: 2025/第一季度.md
+  - 关于:
+    - 关于我: About/About Me.md
+
+
+extra:
+  homepage: https://example.com
+plugins:
+  - search
+markdown_extensions:
+  - toc:
+      permalink: true     # 标题生成锚点链接
+  - pymdownx.superfences  # 增强代码块支持
